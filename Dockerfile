@@ -13,7 +13,7 @@ RUN mkdir -p /tmp/hugo/ \
     && rm -rf /tmp/hugo/
 
 # Install s3cmd
-ENV S3CMD_VERSION=1.6.1
+ENV S3CMD_VERSION=2.0.0
 RUN apt-get update && apt-get install -y python-setuptools \
     && curl -L https://github.com/s3tools/s3cmd/releases/download/v${S3CMD_VERSION}/s3cmd-${S3CMD_VERSION}.tar.gz | tar xzC /tmp/ \
     && cd /tmp/s3cmd-${S3CMD_VERSION}/ \
